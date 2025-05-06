@@ -1,0 +1,10 @@
+@echo off
+echo Generando analizador léxico con JFlex...
+java -jar lib\jflex-full-1.8.2.jar -d src\robotcontrol src\robotcontrol\Robot.flex
+
+echo Compilando archivos Java...
+mkdir bin
+javac -d bin -cp lib\jflex-full-1.8.2.jar src\robotcontrol\*.java
+
+echo Compilación completada.
+pause
